@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: #f1f1f1;
+  }
+  
+  .juego-memoria {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tarjeta-ind {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 1s;   
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  
+  .tarjeta-ind:active {
+    transform: scale(0.95);
+    transition: transform .2s;
+  }
+  
+  .tarjeta-ind.volteada {
+    transform: rotateY(180deg);
+  }
+  
+  .frente,
+  .trasera {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background: #7f91a0;
+    backface-visibility: hidden;
+  }
+
+  .frente {
+    transform: rotateY(180deg);
+  }
