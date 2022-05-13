@@ -19,10 +19,26 @@ const tarjetas = document.querySelectorAll('.tarjeta-ind')
 let hayVolteada = false
 let impedirVoltear = false
 let primeraTarjeta, segundaTarjeta
+let yaInicio = false
 
-// Las mezclamos, las mostramos unos segundos
-mezclarTarjetas()
-muestraInicial()
+botonInicio = document.getElementById('botonInicio')
+botonInicio.addEventListener('click', iniciarJuego)
+
+/*
+    EJECUTADO CON EL CLICK DEL BOTON INICIO
+*/
+
+function iniciarJuego() {
+  // Checkeo que no lo inicie mas de una vez
+  if (yaInicio)
+    return
+  yaInicio = true
+  // Las mezclamos, las mostramos unos segundos
+  mezclarTarjetas()
+  muestraInicial()
+  // Recien ahora podran clickear las tarjetas
+  tarjetas.forEach(tarjeta => tarjeta.addEventListener('click', voltearTarjeta))
+}
 
 // Hay una propiedad llamada ORDER. Por defecto la tienen en 0 asique se ponen en el orden que estan declaradas en el HTML.
 // Asique para mezclar recorremos las y les asignamos un numero random
@@ -33,12 +49,19 @@ function mezclarTarjetas() {
   });
 }
 
+// Muestra las imagenes unos segundos y luego las vuelve a ocultar
 function muestraInicial(){
   tarjetas.forEach(tarjeta => tarjeta.classList.add('volteada'))
   setTimeout(() => {
     tarjetas.forEach(tarjeta => tarjeta.classList.remove('volteada'))
   }, 2000);
 }
+
+
+
+/*
+    EJECUTADO CON EL CLICK DE LA TARJETA
+*/
 
 
 function voltearTarjeta() {
@@ -80,5 +103,3 @@ function desVoltearTarjetas() {
   }, 1000);
 }
 
-// Escucha evento de click para ejecutar la volteada
-tarjetas.forEach(tarjeta => tarjeta.addEventListener('click', voltearTarjeta))

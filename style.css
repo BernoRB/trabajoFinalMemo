@@ -1,21 +1,32 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
+
   body {
-    height: 100vh;
-    display: flex;
     background: #f1f1f1;
   }
-  
+
+  .inicio {
+    height: 150px;
+    display: flex;
+  }
+
+  #botonInicio {
+    height: 30px;
+    margin: auto; /* lo centra dentro del padre que es inicio*/
+  }
+
+  .contenedor-juego {
+    height: 100vh;
+    display: flex;
+  }
+
   .juego-memoria {
+    margin: 0 auto;
     width: 640px;
     height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   .tarjeta-ind {
