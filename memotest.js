@@ -22,15 +22,16 @@ let hayVolteada = false
 let impedirVoltear = false
 let primeraTarjeta, segundaTarjeta
 let yaInicio = false
-
+// Click para iniciar juego
 botonInicio = document.getElementById('botonInicio')
 botonInicio.addEventListener('click', iniciarJuego)
+
+document.getElementById('seccionNombre').innerHTML = "Jugador: " + localStorage.getItem('nombre')  ;
 
 /*
     EJECUTADO CON EL CLICK DEL BOTON INICIO
 */
 
-document.getElementById('seccionNombre').innerHTML = "Jugador: " + localStorage.getItem('nombre')  ;
 
 function iniciarJuego() {
   // Checkeo que no lo inicie mas de una vez
@@ -69,7 +70,6 @@ function muestraInicial(){
     EJECUTADO CON EL CLICK DE LA TARJETA
 */
 
-
 function voltearTarjeta() {
   if ((impedirVoltear) || (this == primeraTarjeta))   //Antes que nada, metemos esto asi no puede voltear mas de dos al mismo tiempo y asi no puede dar dos clicks a la misma y romper todo
     return
@@ -88,8 +88,10 @@ function voltearTarjeta() {
 function verCoincidencia() {
   if (primeraTarjeta.dataset.producto == segundaTarjeta.dataset.producto) {
     bloquearTarjetas()    // Si hay acierto, quitamos el listener para que no se puedan voltear nuevamente
+    sumarPuntos()
   } else {
-    desVoltearTarjetas()    // Si no hay acierto, las desvolteamos
+    desVoltearTarjetas()   
+    restarPuntos() // Si no hay acierto, las desvolteamos
   }
 } 
 
@@ -109,3 +111,19 @@ function desVoltearTarjetas() {
   }, 1000);
 }
 
+
+
+/* CONTEO DE PUNTOS */
+
+puntaje = 0
+
+function sumarPuntos () {
+    puntaje = puntaje + 3
+    document.getElementById('seccionPuntaje').innerHTML = "Puntaje: " + puntaje
+}
+
+function restarPuntos () {
+    if (puntaje > 0)
+        puntaje--
+    document.getElementById('seccionPuntaje').innerHTML = "Puntaje: " + puntaje
+}
