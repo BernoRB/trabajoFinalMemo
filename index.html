@@ -5,100 +5,58 @@
   <meta charset="UTF-8">
   <title>Memotest</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <!-- Arriba del juego -->
-  <section class="inicio">
-    <button type="button" id="botonInicio">Iniciar Juego</button>
+
+  <section class="inicio" style="background-image: url('/imgs/background.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col vertical-center">
+          <div class="card" style="width: 36rem">
+            <div class="card-body">
+              <h5 class="card-title">TELEDOM ¡jugá y ganá!</h5>
+              <p class="card-text">
+                Ingresá tu nombre y tu mail para participar de JUEGOS en los que vas a ganar descuentos
+                para contratar nuestros servicios.
+              </p>
+
+              <form>
+                <div class="mb-3">
+                  <input type="name" class="form-control form-control-lg" id="nombreInput" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-control-lg" id="mailInput" placeholder="Mail">
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="mayorEdad">
+                  <label class="form-check-label" for="mayorEdad">Soy mayor de 18 años</label>
+                </div>
+
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary" id="botonJugar">¡A
+                    jugar!</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
-  <!-- El juego en si -->
-  <section class="contenedor-juego">
-    <!--Seccion tarjetas del juego-->
-    <section class="juego-memoria">
-      <!--Cada tarjeta un div con una foto para el back y otra para el front-->
-      <div class="tarjeta-ind" data-producto="flow">
-        <img class="frente" src="imgs/flow.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
 
-      <div class="tarjeta-ind" data-producto="flow">
-        <img class="frente" src="imgs/flow.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
 
-      <div class="tarjeta-ind" data-producto="internet">
-        <img class="frente" src="imgs/internet.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="internet">
-        <img class="frente" src="imgs/internet.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="minegocio">
-        <img class="frente" src="imgs/minegocio.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="minegocio">
-        <img class="frente" src="imgs/minegocio.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="personalpay">
-        <img class="frente" src="imgs/personalpay.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="personalpay">
-        <img class="frente" src="imgs/personalpay.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="movil">
-        <img class="frente" src="imgs/redmovil.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="movil">
-        <img class="frente" src="imgs/redmovil.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="lineafija">
-        <img class="frente" src="imgs/redfija.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-
-      <div class="tarjeta-ind" data-producto="lineafija">
-        <img class="frente" src="imgs/redfija.jpg">
-        <img class="trasera" src="imgs/telecom-back.jpg">
-      </div>
-    </section>
-  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
   <script src="scripts.js"></script>
 
 </body>
 
 </html>
-
-<!-- PRIMER ENTREGA:
-El estudiante deberá utilizar el tag correspondiente para asociar un script JS a una página HTML.
-
-En caso de contar con conocimientos previos en HTML y CSS puede plantear los elementos iniciales 
-correspondientes a la interfaz del simulador.
--->
-
-<!-- SEGUNDA ENTREGA:
-El estudiante deberá utilizar el tag correspondiente para asociar un script JS a una página HTML.
-
-Construir la interfaz inicial del simulador, definiendo elementos destinados a la captura de entradas 
-(formularios, inputs y/o botones) y secciones en el HTML para la notificación de salidas
--->

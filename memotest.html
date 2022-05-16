@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memotest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col" align="right" id="seccionNombre">
+            </div>
+            <div class="col" align="center">
+                <button type="button" class="btn btn-primary" id="botonInicio">Iniciar Juego</button>
+            </div>
+            <div class="col" align="left">
+                Puntaje: 
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <!-- El juego en si. Display:none hasta que se clickea el boton de arriba -->
+            <section class="contenedor-juego" id="seccion-juego">
+                <!--Seccion tarjetas del juego-->
+                <section class="juego-memoria">
+                    <!--Cada tarjeta un div con una foto para el back y otra para el front-->
+                    <div class="tarjeta-ind" data-producto="flow">
+                        <img class="frente" src="imgs/flow.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="flow">
+                        <img class="frente" src="imgs/flow.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="internet">
+                        <img class="frente" src="imgs/internet.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="internet">
+                        <img class="frente" src="imgs/internet.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="minegocio">
+                        <img class="frente" src="imgs/minegocio.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="minegocio">
+                        <img class="frente" src="imgs/minegocio.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="personalpay">
+                        <img class="frente" src="imgs/personalpay.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="personalpay">
+                        <img class="frente" src="imgs/personalpay.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="movil">
+                        <img class="frente" src="imgs/redmovil.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="movil">
+                        <img class="frente" src="imgs/redmovil.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="lineafija">
+                        <img class="frente" src="imgs/redfija.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+
+                    <div class="tarjeta-ind" data-producto="lineafija">
+                        <img class="frente" src="imgs/redfija.jpg">
+                        <img class="trasera" src="imgs/telecom-back.jpg">
+                    </div>
+                </section>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="memotest.js"></script>
+
+</body>
+
+</html>
+
+<!-- PRIMER ENTREGA:
+El estudiante deberá utilizar el tag correspondiente para asociar un script JS a una página HTML.
+
+En caso de contar con conocimientos previos en HTML y CSS puede plantear los elementos iniciales 
+correspondientes a la interfaz del simulador.
+-->
+
+<!-- SEGUNDA ENTREGA:
+El estudiante deberá utilizar el tag correspondiente para asociar un script JS a una página HTML.
+
+Construir la interfaz inicial del simulador, definiendo elementos destinados a la captura de entradas 
+(formularios, inputs y/o botones) y secciones en el HTML para la notificación de salidas
+-->

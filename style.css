@@ -1,25 +1,35 @@
 
   body {
-    background: #f1f1f1;
+    background: #ffffff;
   }
 
-  .inicio {
-    height: 150px;
+  /* Este vertical-center es de la landing para centrar */
+  .vertical-center {
+    height: 100vh;
+    width: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+
+  /* Desde aca memotest */
+  
   #botonInicio {
-    height: 30px;
-    margin: auto; /* lo centra dentro del padre que es inicio*/
+    margin: auto;
+
   }
 
   .contenedor-juego {
+    background: #ffffff;
     height: 100vh;
+    width: 100vh;
     display: flex;
+    margin: auto;
   }
 
   .juego-memoria {
-    margin: 0 auto;
+    margin: auto;
     width: 640px;
     height: 640px;
     margin: auto;
@@ -63,3 +73,5 @@
   .frente {
     transform: rotateY(180deg);
   }
+
+  /* Fin memotest */
