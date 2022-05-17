@@ -76,18 +76,14 @@
 
   /* Fin memotest */
   
-  /* Resultados */
-  #tarjetaRdos {
-    width: 70vh;
-    margin: 0 auto;
-  }
-
-  .card-group {
-    margin: auto;
-    width: 800px;
+  /* Eleccion Producto */
+  .cardProducto {
+    margin-top: 25%;
+    width: 300px;
   }
 
   .card-img-top {
     width: 200px;
     height: 200px;
   }
+
