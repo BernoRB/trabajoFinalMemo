@@ -175,6 +175,8 @@ function terminoJuego() {
 botonJugar = document.getElementById('botonAvanzar')
 botonJugar.addEventListener('click', avanzarJuego)
 
-function avanzarJuego() {
-    window.location.href = "resultados.html";
-}
+
+
+
+
+

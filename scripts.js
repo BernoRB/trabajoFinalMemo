@@ -14,8 +14,9 @@ literales y/o parseo JSON, tanto para obtener como para almacenar datos.
 */
 
 //Guardo en localStorage nombre y mail del jugador
-botonJugar = document.getElementById('botonJugar')
-botonJugar.addEventListener('click', guardarValores)
+
+//botonJugar = document.getElementById('botonJugar')
+//botonJugar.addEventListener('click', guardarValores)
 
 function guardarValores() {
   localStorage.clear();
@@ -25,6 +26,4 @@ function guardarValores() {
 
   inputMail = document.getElementById('mailInput')
   localStorage.setItem("mail", inputMail.value)
-
-  window.location.href = "memotest.html";
 }
