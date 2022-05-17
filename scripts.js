@@ -18,6 +18,8 @@ botonJugar = document.getElementById('botonJugar')
 botonJugar.addEventListener('click', guardarValores)
 
 function guardarValores() {
+  localStorage.clear();
+
   inputNombre = document.getElementById('nombreInput')
   localStorage.setItem("nombre", inputNombre.value)
 

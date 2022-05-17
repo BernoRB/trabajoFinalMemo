@@ -60,7 +60,6 @@ function iniciarJuego() {
     tarjetas.forEach(tarjeta => tarjeta.addEventListener('click', voltearTarjeta))
 }
 
-// Hay una propiedad llamada ORDER. Por defecto la tienen en 0 asique se ponen en el orden que estan declaradas en el HTML.
 // Asique para mezclar recorremos las y les asignamos un numero random
 function mezclarTarjetas() {
     tarjetas.forEach(tarjeta => {
@@ -81,7 +80,7 @@ function muestraInicial() {
 
 
 
-/* EJECUTADO CON EL CLICK DE LA TARJETA  */
+/* MANEJO TARJETAS  */
 
 function voltearTarjeta() {
     if ((impedirVoltear) || (this == primeraTarjeta))   //Antes que nada, metemos esto asi no puede voltear mas de dos al mismo tiempo y asi no puede dar dos clicks a la misma y romper todo
@@ -150,6 +149,7 @@ function restarPuntos() {
 
 
 /* CRONOMETRO */
+
 function sumaSegundos() {
     if (sigueSegundero) {
         segundos += 1;
@@ -157,12 +157,24 @@ function sumaSegundos() {
     }
 }
 
+
 /* TERMINA EL JUEGO */
+
 function terminoJuego() {
-    sigueSegundero = false
+    sigueSegundero = false // Detenemos el timer
     console.log("Termino el juego. Hiciste "+puntaje+" puntos y tardaste "+segundos+" segundos.")
+    // Ocultamos botones previos, mostramos nuevo botón de avanzar
     document.getElementById('botonAvanzar').style.display = "flex"
     document.getElementById('botonReglas').style.display = "none"
     document.getElementById('botonInicio').style.display = "none"
+    // Guardamos en storage
+    localStorage.setItem("puntajeObtenido",puntaje)
+    localStorage.setItem("segundosTardados",segundos)
+}
 
+botonJugar = document.getElementById('botonAvanzar')
+botonJugar.addEventListener('click', avanzarJuego)
+
+function avanzarJuego() {
+    window.location.href = "resultados.html";
 }
