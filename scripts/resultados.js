@@ -31,7 +31,7 @@ fetch("../datosProductos.json")
     productos = json.productos
 
     // Le paso los productos que coinciden con el producto que escogió al inicio
-    for (i=0; i<productos.length-1; i++)
+    for (i=0; i<productos.length; i++)
         if (productos[i].numProducto == idProducto)
             mostrarProductos(productos[i])
   })
