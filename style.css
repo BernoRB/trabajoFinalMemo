@@ -21,7 +21,6 @@
   }
 
   .contenedor-juego {
-    background: #ffffff;
     height: 100vh;
     width: 100vh;
     display: flex;
@@ -29,7 +28,6 @@
   }
 
   .juego-memoria {
-    margin: auto;
     width: 640px;
     height: 640px;
     margin: auto;
@@ -74,7 +72,6 @@
     transform: rotateY(180deg);
   }
 
-  /* Fin memotest */
   
   /* Eleccion Producto */
   .cardProducto {
@@ -87,3 +84,7 @@
     height: 200px;
   }
 
+  /* Resultados */
+  .rowRdos {
+    margin: 5% 15%;
+  }

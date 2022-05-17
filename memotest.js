@@ -162,7 +162,6 @@ function sumaSegundos() {
 
 function terminoJuego() {
     sigueSegundero = false // Detenemos el timer
-    console.log("Termino el juego. Hiciste "+puntaje+" puntos y tardaste "+segundos+" segundos.")
     // Ocultamos botones previos, mostramos nuevo botón de avanzar
     document.getElementById('botonAvanzar').style.display = "flex"
     document.getElementById('botonReglas').style.display = "none"
@@ -174,7 +173,6 @@ function terminoJuego() {
 
 botonJugar = document.getElementById('botonAvanzar')
 botonJugar.addEventListener('click', avanzarJuego)
-
 
 
 
